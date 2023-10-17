@@ -1,5 +1,6 @@
 package ku.atm;
-
+//b6410406878
+// Sarunpawat Phosoi
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -42,6 +43,11 @@ public class StepDefATM {
     @Then("I cannot login")
     public void i_cannot_login() {
         assertFalse(validLogin);
+    }
+
+    @When("I deposit {float} to ATM")
+    public void i_deposit_to_atm(double amount) {
+        atm.deposit(amount);
     }
 
     @When("I withdraw {float} from ATM")
